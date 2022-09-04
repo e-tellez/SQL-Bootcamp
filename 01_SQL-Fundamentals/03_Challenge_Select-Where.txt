@@ -1,0 +1,35 @@
+Challenge 1:
+Solution:
+SELECT
+	email,
+	first_name,
+	last_name
+FROM
+	customer
+WHERE
+	first_name = 'Nancy'
+	AND last_name = 'Thomas'
+
+
+Challenge 2: A customer whants to know what the  movie "Outlaw Hanky" is about
+Solution:
+SELECT
+	title,
+	description
+FROM
+	film
+WHERE
+	title = 'Outlaw Hanky'
+
+
+
+Challenge 3: A customer is late on their movie return, and we've mailed them a letter
+            to their addres at '259 Ipoh Drive'. We should also call them on the phone
+            to let them know. Can you get the phone for the customer who lives at '259 Ipoh Drive'?
+Solution:
+SELECT
+	phone
+FROM
+	address
+WHERE
+	address = '259 Ipoh Drive'
