@@ -1,0 +1,17 @@
+examples:
+SELECT
+	customer_id,
+	COUNT(amount) as TPN,
+	SUM(amount) as TPV
+FROM payment
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC
+
+How much is every customer is spending with each staff
+SELECT
+	customer_id,
+	staff_id,
+	SUM(amount)
+FROM payment
+GROUP BY staff_id, customer_id
+ORDER BY customer_id, SUM(amount) DESC

@@ -1,0 +1,18 @@
+Allows to filter after an aggregation has already taken place
+
+Examples:
+
+Notes: SUM function happens after GROUP BY
+SELECT
+	customer_id,
+	SUM(amount) as tpv
+FROM payment
+GROUP BY customer_id
+HAVING SUM(amount) > 100
+
+SELECT
+	store_id,
+	COUNT(customer_id)
+FROM customer
+GROUP BY store_id
+HAVING COUNT(customer_id) > 300
