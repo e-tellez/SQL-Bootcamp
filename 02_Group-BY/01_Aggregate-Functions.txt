@@ -1,0 +1,20 @@
+AVG: You can use ROUND() to specify precision after the decimal
+COUNT
+MAX - MIN
+SUM
+
+They only happen only in SELECT or HAVING clause
+
+examples:
+SELECT
+	MIN(replacement_cost)
+FROM film
+
+SELECT
+	MAX(replacement_cost)
+FROM film
+
+SELECT
+	MAX(replacement_cost),
+	MIN(replacement_cost)
+FROM film

@@ -1,2 +1,4 @@
 *.tar
 .pre-commit-config.yaml
+
+docs
