@@ -7,14 +7,8 @@ They only happen only in SELECT or HAVING clause
 
 examples:
 SELECT
-	MIN(replacement_cost)
-FROM film
-
-SELECT
-	MAX(replacement_cost)
-FROM film
-
-SELECT
 	MAX(replacement_cost),
-	MIN(replacement_cost)
+	MIN(replacement_cost),
+	ROUND(AVG(replacement_cost), 4),
+	SUM(replacement_cost)
 FROM film
