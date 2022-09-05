@@ -1,0 +1,27 @@
+
+Challenge 1: California sales tax laws have changed and we need to alert our
+			customers to this through email.
+            What are the emails of the customers who live in California?
+Solution:
+SELECT
+	first_name,
+	email,
+	district
+FROM address INNER join customer ON address.address_id = customer.address_id
+WHERE district = 'California'
+
+
+Challenge 2: A customer walks in and is a huge fan of the actor 'Nick Wahlberg'
+			and wants to know wich movies he is in.
+            Get a list of all the movies 'Nick Wahlberg' has been in
+Solution:
+SELECT title,
+	actor.first_name,
+	actor.last_name
+FROM film_actor
+INNER JOIN film ON film_actor.film_id = film.film_id
+INNER JOIN actor ON film_actor.actor_id = actor.actor_id
+WHERE
+actor.first_name = 'Nick'
+AND actor.last_name = 'Wahlberg'
+
